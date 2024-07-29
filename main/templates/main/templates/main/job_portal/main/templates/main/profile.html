@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Profile</h2>
+    {% if user.is_employer %}
+        <p>Company Name: {{ profile.company_name }}</p>
+        <p>Company Description: {{ profile.company_description }}</p>
+    {% else %}
+        <p>Resume: {{ profile.resume }}</p>
+    {% endif %}
+</body>
+</html>
